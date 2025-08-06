@@ -8,12 +8,11 @@ set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 set(CMAKE_CUDA_STANDARD 14)
 
 aux_source_directory(kuiper/source/base DIR_BASE)
+aux_source_directory(kuiper/source/tensor DIR_TENSOR)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
-add_library(llama SHARED ${DIR_BASE})
-# target_link_libraries(llama )
-# target_link_directories(llama PUBLIC )
+add_library(llama SHARED ${DIR_BASE} ${DIR_TENSOR})
 
 target_include_directories(llama PUBLIC ${PROJECT_SOURCE_DIR}/kuiper/include)
 
