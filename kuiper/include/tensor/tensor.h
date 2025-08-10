@@ -34,6 +34,8 @@ public:
     const std::vector<int32_t>& dims() const; 
 
     bool is_empty() const;
+    
+    void set_device_type(base::DeviceType device_type) const;
 
     template<typename T>
     T* ptr();

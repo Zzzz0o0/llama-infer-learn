@@ -7,6 +7,12 @@ enum class LayerType : uint8_t{
     kLayerUnknown = 0,
     kLayerLinear = 1,
     kLayerAdd = 2,
+    kLayerMatmul = 3,
+    kLayerEmbedding = 4,
+    kLayerRMSNorm = 5,
+    kLayerRoPE = 6,
+    kLayerSwiGLU = 7,
+    kLayerMHA = 8,
 };
 
 
@@ -97,6 +103,8 @@ public:
     const tensor::Tensor& get_weight(int32_t idx) const;
 
     void set_scales(const tensor::Tensor& scales);
+
+    void reset_weight_size(size_t size);
 
 protected:
     bool is_quant_layer_ = false;

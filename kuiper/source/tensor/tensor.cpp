@@ -123,4 +123,10 @@ bool Tensor::is_empty() const{
     else return true;
 }
 
+void Tensor::set_device_type(base::DeviceType device_type) const {
+  if (buffer_) {
+    buffer_->set_device_type(device_type);
+  }
+}
+
 } //namespace tensor

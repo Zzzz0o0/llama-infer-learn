@@ -22,6 +22,7 @@ public:
     bool is_external() const;
     DeviceType device_type() const;
     std::shared_ptr<DeviceAllocator> allocator() const;
+    void set_device_type(base::DeviceType device_type);
 };
 } // namespace base
 #endif // KUIPER_INCLUDE_BASE_BUFFER_H_

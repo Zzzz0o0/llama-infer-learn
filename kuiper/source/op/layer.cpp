@@ -87,4 +87,6 @@ void LayerParam::set_scales(const tensor::Tensor& scales) {
   this->scales_ = scales;
 }
 
+void LayerParam::reset_weight_size(size_t size) { weights_.resize(size); }
+
 } // namespace op

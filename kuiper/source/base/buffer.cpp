@@ -61,4 +61,7 @@ bool Buffer::is_external() const {
   return this->use_external_;
 }
 
+void Buffer::set_device_type(base::DeviceType device_type){
+  this->device_type_ = device_type;
+}
 } // namespace base
