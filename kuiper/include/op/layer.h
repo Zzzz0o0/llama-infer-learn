@@ -13,6 +13,7 @@ enum class LayerType : uint8_t{
     kLayerRoPE = 6,
     kLayerSwiGLU = 7,
     kLayerMHA = 8,
+    kLayerEncode = 9,
 };
 
 

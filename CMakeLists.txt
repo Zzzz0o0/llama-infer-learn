@@ -19,7 +19,7 @@ aux_source_directory(kuiper/source/op/kernels/cpu DIR_KERNEL_CPU)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
 add_library(llama SHARED ${DIR_BASE} ${DIR_TENSOR} ${DIR_OP} ${DIR_KERNEL} ${DIR_KERNEL_CPU})
-target_link_libraries(llama armadillo)
+target_link_libraries(llama armadillo sentencepiece)
 target_include_directories(llama PUBLIC ${PROJECT_SOURCE_DIR}/kuiper/include)
 
 add_subdirectory(test)
